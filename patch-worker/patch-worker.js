@@ -95,7 +95,7 @@ limitations under the License.
         this.Worker.postMessage.apply(this.Worker, arguments);
       } else {
         // Trigger validation:
-        dummyWorker.postMessage(message);
+        dummyWorker.postMessage(message, transfer);
         // Alright, push the valid message to the queue.
         this._messageQueue.push(arguments);
       }
